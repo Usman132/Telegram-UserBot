@@ -110,23 +110,6 @@ async def killdabot(e):
         await e.reply('`Goodbye *Windows XP shutdown sound*....`')
         time.sleep(2)
         await bot.send_message(LOGGER_GROUP,"You shutdown the bot for "+str(counter)+" seconds")
-        time.sleep(counter)
-@bot.on(events.NewMessage(outgoing=True,pattern='.support'))
-@bot.on(events.MessageEdited(outgoing=True,pattern='.support'))
-async def killdabot(e):
-        await e.edit("Report bugs here: @userbot_support")
-@bot.on(events.NewMessage(outgoing=True,pattern='.helpme'))
-@bot.on(events.MessageEdited(outgoing=True,pattern='.helpme'))
-async def readme(e):
-        await e.edit('https://github.com/baalajimaestro/Telegram-UserBot/blob/master/README.md')
-@bot.on(events.NewMessage(outgoing=True,pattern='.repo'))
-@bot.on(events.MessageEdited(outgoing=True,pattern='.repo'))
-async def repo_is_here(e):
-        await e.edit('https://github.com/baalajimaestro/Telegram-UserBot/')
-@bot.on(events.NewMessage(outgoing=True,pattern='.supportchannel'))
-@bot.on(events.MessageEdited(outgoing=True,pattern='.supportchannel'))
-async def support_channel(e):
-        await e.edit('t.me/maestro_userbot_channel')
 @bot.on(events.NewMessage(outgoing=True,pattern='.sysdetails'))
 @bot.on(events.MessageEdited(outgoing=True,pattern='.sysdetails'))
 async def sysdetails(e):
