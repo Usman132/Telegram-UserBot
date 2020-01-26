@@ -10,15 +10,7 @@ import glob
 import subprocess
 import os
 import sqlite3
-subprocess.run(['rm','-rf','brains.check'], stdout=subprocess.PIPE)
-subprocess.run(['wget','https://storage.googleapis.com/project-aiml-bot/brains.check'], stdout=subprocess.PIPE)
-db=sqlite3.connect("brains.check")
-cursor=db.cursor()
-cursor.execute('''SELECT * FROM BRAIN1''')
-all_rows = cursor.fetchall()
-for i in all_rows:
-    BRAIN_CHECKER.append(i[0])
-db.close()
+
 if not os.path.exists('filters.db'):
      db= sqlite3.connect("filters.db")
      cursor=db.cursor()
